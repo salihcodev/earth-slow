@@ -1,0 +1,121 @@
+// import vars:
+@import "../../sass/_vars"
+
+// HEARER:
+nav.header
+  padding: 0.6rem 1rem
+  display: flex
+  justify-content: space-between
+  align-items: center
+  border-bottom: 1px solid $main-cl
+
+  // logo
+  div.logo-container
+    .logo
+      width: 7rem
+      height: 3rem
+
+  // routes
+  div.nav-routes-container
+    flex-grow: 2
+    ul.nav-routes
+      display: flex
+      list-style: none
+      margin: 0
+      padding: 0
+      justify-content: flex-end
+      padding-right: 3rem
+      li.nav-route
+        min-width: 3rem
+        a
+          color: $main-cl
+          text-decoration: none
+          font-family: $main-font
+
+  // sign-in & burch
+  div.purchase
+    button
+      padding: 0.5rem 1rem
+      font-size: 1rem
+      font-weight: bold
+      background: transparent
+      border: 1px solid $main-cl
+      margin-right: 0.8rem
+      color: $gray-cl-3
+      transition: $fast-transition
+      outline: 0
+
+      &:hover
+        background: $alt-clr-2
+
+      &:first-child
+        background: $alt-clr-1
+        &:hover
+          background: $main-cl
+
+      &:last-child
+        color: $main-cl
+        &:hover
+          color: $gray-cl-3
+
+  // toggler
+  button.toggler-container
+    font-size: 1.6rem
+    background: transparent
+    border: none
+    span.bar
+      background: $main-cl
+      display: block
+      width: 1.5rem
+      height: 2px
+      margin: 5px 0
+      border-radius: 10px
+
+// alternative nav
+section.small-screen-navbar
+  max-height: 0
+  overflow: hidden
+  transition: $main-transition
+  div.small-screen-navbar-container
+    padding: 2rem
+    div.alt-nav-routes-container
+      ul.alt-nav-routes
+        display: block
+        list-style: none
+        margin: 0
+        margin-bottom: 1rem
+        padding: 0
+        li.alt-nav-route
+          min-width: 3rem
+          padding: 0.2rem 0
+          &:not(:last-child)
+            border-bottom: 1px solid $gray-cl-3
+          a
+            color: $main-cl
+            text-decoration: none
+            font-family: $main-font
+
+    div.purchase
+      button
+        padding: 0.5rem 1rem
+        font-size: 1rem
+        font-weight: bold
+        background: transparent
+        border: 1px solid $main-cl
+        margin-right: 0.8rem
+        color: $gray-cl-3
+        transition: $fast-transition
+        outline: 0
+
+        &:hover
+          background: $alt-clr-2
+
+        &:first-child
+          background: $alt-clr-1
+          &:hover
+            background: $main-cl
+
+        &:last-child
+          color: $main-cl
+          &:hover
+            color: $gray-cl-3
