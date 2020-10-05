@@ -2,9 +2,8 @@
 module.exports = {
   /*** PLUGINS ***/
   plugins: [
-    // sass:
     {
-      resolve: "gatsby-plugin-sass",
+      resolve: 'gatsby-plugin-sass',
       options: {
         useResolveUrlLoader: {
           options: {
@@ -13,5 +12,11 @@ module.exports = {
         },
       },
     }, // sass
+    {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+        // Add any options here
+      },
+    }, // gatsby-styled-component
   ],
-}
+};

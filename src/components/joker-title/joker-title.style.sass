@@ -1,0 +1,23 @@
+// INCLUDE VARIABLES:
+@import "../../sass/vars/_vars"
+
+h2.joker-title
+  text-transform: uppercase
+  color: $main-cl
+  font-weight: bolder
+  position: relative
+  margin: 2rem 0 3rem
+  span.text
+    &::before
+      display: block
+      content: ''
+      width: 5rem
+      height: 1rem
+      background: $dark-gray
+      position: absolute
+      top: 25%
+      left: 1rem
+      z-index: -1
+      transform: rotate(-3deg)
+  span.subtext
+    color: $alt-clr-2

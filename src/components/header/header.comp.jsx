@@ -7,7 +7,6 @@ import { EarthSlowContext } from '../../contextAPI/context/contextAPI';
 import { v4 as uuid } from 'uuid';
 import { Link } from 'gatsby';
 import Logo from '../../images/logo.svg';
-import 'bootstrap/dist/css/bootstrap.css';
 
 // COMPONENT:=>
 const HeaderComp = () => {
