@@ -1,0 +1,72 @@
+/**============
+ VERSION					 :	3.1,
+ CODED BY					:	AHMED ALI SALIH,
+ EMAIL		 : Ahmedsalihdev@gmail.com,
+ PORTFOLIO			: https://ahmedsalih.netlify.com
+ ============**/
+
+/* START MEDIA QUERY PART */
+
+// break points vrs.
+$extra_small_point: 575.98px;
+$small_point: 767.98px;
+$medium_small_point: 991.98px;
+$large_small_point: 1199.98px;
+$extra_large_small_point: 1200px;
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: $extra_small_point) {
+  // hide main nav contents.
+  nav.header {
+    .nav-routes-container {
+      display: none !important;
+    }
+    .purchase {
+      display: none !important;
+    }
+  }
+
+  // show alternative nav.
+  section.small-screen-navbar {
+    display: block !important;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: $extra_small_point) and (max-width: $small_point) {
+  nav.header {
+    .nav-routes-container {
+      display: none !important;
+    }
+    .purchase {
+      display: none !important;
+    }
+  }
+
+  section.small-screen-navbar {
+    display: block !important;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: $small_point) and (max-width: $medium_small_point) {
+  button.toggler-container {
+    display: none !important;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: $medium_small_point) and (max-width: $large_small_point) {
+  button.toggler-container {
+    display: none !important;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: $extra_large_small_point) {
+  button.toggler-container {
+    display: none !important;
+  }
+}
+
+/* END MEDIA QUERY PART */
