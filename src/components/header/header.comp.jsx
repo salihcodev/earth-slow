@@ -11,25 +11,23 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 // COMPONENT:=>
 const HeaderComp = () => {
-  const {
-    navState,
-    FlipNavState,
-    NavRoutes,
-    ServicesSection,
-    SocialIcons,
-  } = React.useContext(EarthSlowContext);
+  const { navState, FlipNavState, NavRoutes } = React.useContext(
+    EarthSlowContext
+  );
   console.log(navState);
 
   return (
     <>
       <nav className="header">
         {/* logo */}
-        <div className="logo-container">
-          <div
-            className="logo"
-            style={{ background: ` url(${Logo}) center/cover` }}
-          ></div>
-        </div>
+        <Link to="/">
+          <div className="logo-container">
+            <div
+              className="logo"
+              style={{ background: ` url(${Logo}) center/cover` }}
+            ></div>
+          </div>
+        </Link>
 
         {/* links */}
         <div className="nav-routes-container">
