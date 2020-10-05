@@ -18,14 +18,14 @@ const About = () => (
 
     <div className="row">
       {/* image */}
-      <div className="img-wing col-6">
+      <div className="img-wing col-lg-6 col-md-12">
         <div className="img-container">
           <img src={`${AboutImg}`} alt="about us" />
         </div>
       </div>
 
       {/* text or information about company */}
-      <div className="info-wing col-6">
+      <div className="info-wing col-lg-6 col-md-12">
         <h3 className="about-title">Explore the difference</h3>
         <p className="about-description-one">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi eius
