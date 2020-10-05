@@ -3,8 +3,14 @@ import React from 'react';
 
 // CONSTANTS:
 import NavRoutes from '../constants/routes';
-import ServicesSection from '../constants/services';
-import SocialIcons from '../constants/social-icons';
+import SocialMediaLinks from '../constants/SocialMediaLinks';
+import {
+  Projects,
+  Support,
+  Company,
+  companyExperience,
+} from '../constants/SiteMap';
+import ServicesData from '../constants/ServicesData';
 
 // create context:
 const EarthSlowContext = React.createContext();
@@ -22,8 +28,12 @@ const EarthSlowProvider = ({ children }) => {
         navState,
         FlipNavState,
         NavRoutes,
-        ServicesSection,
-        SocialIcons,
+        SocialMediaLinks,
+        Projects,
+        Support,
+        Company,
+        companyExperience,
+        ServicesData,
       }}
     >
       {children}
