@@ -5,8 +5,8 @@ import './header.style.sass';
 // UTILITIES:
 import { EarthSlowContext } from '../../contextAPI/context/contextAPI';
 import { v4 as uuid } from 'uuid';
-import { Link } from 'gatsby';
-import Logo from '../../images/logo.svg';
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
+import Logo from '../../assets/logo.svg';
 
 // COMPONENT:=>
 const HeaderComp = () => {
@@ -19,21 +19,23 @@ const HeaderComp = () => {
     <>
       <nav className="header">
         {/* logo */}
-        <Link to="/">
+        <AniLink paintDrip duration={1} hex="#af95bd" to="/">
           <div className="logo-container">
             <div
               className="logo"
               style={{ background: ` url(${Logo}) center/cover` }}
             ></div>
           </div>
-        </Link>
+        </AniLink>
 
-        {/* links */}
+        {/* AniLinks */}
         <div className="nav-routes-container">
           <ul className="nav-routes">
             {NavRoutes.map(({ path, text }) => (
               <li key={uuid()} className="nav-route">
-                <Link to={path}>{text}</Link>
+                <AniLink paintDrip hex="#cdad84" duration={1} to={path}>
+                  {text}
+                </AniLink>
               </li>
             ))}
           </ul>
@@ -41,8 +43,8 @@ const HeaderComp = () => {
 
         {/* signin & purchasing */}
         <div className="purchase">
+          <button className="purchase-tour">Purchase a tour</button>
           <button className="sign-in">Sign in</button>
-          <button className="purchase-tour">Burch a tour</button>
         </div>
 
         {/* toggler */}
@@ -61,12 +63,14 @@ const HeaderComp = () => {
         className={`small-screen-navbar ${navState ? 'opened-nav' : null}`}
       >
         <div className="small-screen-navbar-container">
-          {/* links */}
+          {/* AniLinks */}
           <div className="alt-nav-routes-container">
             <ul className="alt-nav-routes">
               {NavRoutes.map(({ path, text }) => (
                 <li key={uuid()} className="alt-nav-route">
-                  <Link to={path}>{text}</Link>
+                  <AniLink paintDrip duration={1} hex="#cdad84" to={path}>
+                    {text}
+                  </AniLink>
                 </li>
               ))}
             </ul>
@@ -74,8 +78,8 @@ const HeaderComp = () => {
 
           {/* signin & purchasing */}
           <div className="purchase">
+            <button className="purchase-tour">Purchase a tour</button>
             <button className="sign-in">Sign in</button>
-            <button className="purchase-tour">Burch a tour</button>
           </div>
         </div>
       </section>

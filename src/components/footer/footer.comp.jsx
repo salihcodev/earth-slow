@@ -6,8 +6,8 @@ import './footer.style.sass';
 import { Link } from 'gatsby';
 import { v4 as uuid } from 'uuid';
 import { EarthSlowContext } from '../../contextAPI/context/contextAPI';
-import AndroidDown from '../../images/footer/googlePlayLogo.svg';
-import AppleDown from '../../images/footer/appStore.svg';
+import AndroidDown from '../../assets/footer/googlePlayLogo.svg';
+import AppleDown from '../../assets/footer/appStore.svg';
 
 // COMPONENT:=>
 const FooterComp = () => {

@@ -7,14 +7,18 @@ import { Link } from 'gatsby';
 import JokerBtn from '../joker-btn/joker-btn';
 
 // COMPONENT:=>
-const HeroBanner = ({ heading, text, btnVal }) => (
+const HeroBanner = ({ heading, hCl, text, Tcl, btnVal, btnCl, btnBg }) => (
   <section className="hero-banner">
     <div className="flex-shield">
-      <h1 className="hero-heading">{heading}</h1>
-      <p className="hero-text">{text}</p>
+      <h1 className="hero-heading" style={{ color: `${hCl}` }}>
+        {heading}
+      </h1>
+      <p className="hero-text" style={{ color: `${Tcl}` }}>
+        {text}
+      </p>
 
       <Link to="/">
-        <JokerBtn bkgc={'#223036'} color={'#ddd'} text={btnVal} />
+        <JokerBtn bkgc={btnBg} color={btnCl} text={btnVal} />
       </Link>
     </div>
   </section>

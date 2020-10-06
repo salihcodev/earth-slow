@@ -1,10 +1,49 @@
 // BASIC:
-import React from "react"
+import React from 'react';
 
 // COMPONENTS:
-import LayoutWrapperComp from "../components/layout/layout.comp"
+import LayoutWrapperComp from '../components/layout/layout.comp';
+import HeroBanner from '../components/hero-banner/hero-banner';
+import PagesHero from '../components/pages-hero/pages-hero.comp';
+import { graphql } from 'gatsby';
+
+// GRAPHQL QUERY:
+export const query = graphql`
+  {
+    pagesHeroImg: file(relativePath: { eq: "blogBcg.jpg" }) {
+      childImageSharp {
+        fluid(quality: 100, maxWidth: 4800) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+  }
+`;
 
 // PAGE COMPONENT:=>
-const BlogPage = () => <LayoutWrapperComp>BlogPage</LayoutWrapperComp>
+const BlogPage = ({
+  data: {
+    pagesHeroImg: {
+      childImageSharp: { fluid },
+    },
+  },
+}) => (
+  <LayoutWrapperComp>
+    <PagesHero home={false} img={fluid}>
+      <HeroBanner
+        heading={'Know more about our services.'}
+        hCl={'#ddd'}
+        text={'We have a teams that are writing a monthly blog post.'}
+        Tcl={'#ddd'}
+        btnVal={'read featured blogs'.toUpperCase()}
+        btnCl={'#223036'}
+        btnBg={'#ddd'}
+      />
+    </PagesHero>
 
-export default BlogPage
+    {/* bootstrap container */}
+    <div className="container">BlogPage</div>
+  </LayoutWrapperComp>
+);
+
+export default BlogPage;
