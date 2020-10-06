@@ -17,7 +17,7 @@ const LayoutWrapperComp = ({ children }) => (
       {/* HEADER = NAVBAR */}
       <HeaderComp />
 
-      <div className="layout-container container">
+      <div className="layout-container">
         {/* CHILDREN */}
         {children}
       </div>
