@@ -3,6 +3,7 @@ import React from 'react';
 
 // COMPONENTS:
 import LayoutWrapperComp from '../components/layout/layout.comp';
+import ContactForm from '../components/contact-form/contact-form.comp';
 import HeroBanner from '../components/hero-banner/hero-banner';
 import PagesHero from '../components/pages-hero/pages-hero.comp';
 import { graphql } from 'gatsby';
@@ -41,7 +42,9 @@ const ContactPage = ({
     </PagesHero>
 
     {/* bootstrap container */}
-    <div className="container">ContactPage</div>
+    <div className="container">
+      <ContactForm />
+    </div>
   </LayoutWrapperComp>
 );
 
