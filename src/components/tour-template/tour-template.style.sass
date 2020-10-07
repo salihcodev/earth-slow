@@ -1,0 +1,41 @@
+// INCLUDE VARIABLES:
+@import "../../sass/vars/_vars"
+
+div.tour-template
+  .card-body
+    .card-title
+      color: $alt-clr-2
+      padding-bottom: 0
+    .card-text
+      color: $dark-gray
+      display: -webkit-box
+      -webkit-box-orient: vertical
+      -webkit-line-clamp: 3
+      overflow: hidden
+    .card-footer
+      position: relative
+      margin-top: 3rem
+      padding-top: 2rem
+      p.tour-basic-info
+        margin: 0
+        padding: 0
+        display: flex
+        justify-content: space-between
+        small
+          display: block
+      h6
+        margin-top: 0.5rem
+        font-weight: bold
+        color: $alt-clr-2
+      a.tour-details
+        position: absolute
+        top: -22px
+        right: 0
+        background: $alt-clr-2
+        padding: 0.2rem 1rem
+        font-size: 13px
+        color: $gray-cl-3
+        border-radius: 50px
+        border: 0.5rem solid $white
+        text-decoration: none
+        text-transform: uppercase

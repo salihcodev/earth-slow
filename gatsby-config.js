@@ -1,4 +1,9 @@
 //#########: CONFIGURATION :#########//
+// get .env
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
   /*** SITE METADATA ***/
   siteMetadata: {
@@ -14,16 +19,14 @@ module.exports = {
       options: {
         useResolveUrlLoader: {
           options: {
-            sourceMap: true, // false
+            sourceMap: true,
           },
         },
       },
     }, // sass
     {
       resolve: `gatsby-plugin-styled-components`,
-      options: {
-        // Add any options here
-      },
+      options: {},
     }, // gatsby-styled-component
     {
       resolve: `gatsby-source-filesystem`,
@@ -34,8 +37,14 @@ module.exports = {
       },
     }, // source filesystem
     {
-      resolve: 'gatsby-plugin-transition-link',
-    },
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+      },
+    }, // contentful
+    `gatsby-plugin-transition-link`,
+    `gatsby-plugin-playground`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
   ],
