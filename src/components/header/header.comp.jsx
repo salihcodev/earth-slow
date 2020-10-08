@@ -13,7 +13,6 @@ const HeaderComp = () => {
   const { navState, FlipNavState, NavRoutes } = React.useContext(
     EarthSlowContext
   );
-  console.log(navState);
 
   return (
     <>
