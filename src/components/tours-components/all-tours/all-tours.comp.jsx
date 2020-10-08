@@ -28,7 +28,7 @@ const AllToursQuery = graphql`
           }
           iamges {
             fluid {
-              ...GatsbyContentfulFluid_tracedSVG
+              ...GatsbyContentfulFluid
             }
           }
           journeyPlan {
