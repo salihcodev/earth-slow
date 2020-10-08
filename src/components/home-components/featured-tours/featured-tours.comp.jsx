@@ -22,7 +22,6 @@ const FeaturedToursQuery = graphql`
           name
           slug
           price
-          featured
           country
           days
           description {

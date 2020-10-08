@@ -4,6 +4,7 @@ import React from 'react';
 // COMPONENTS:
 import LayoutWrapperComp from '../components/layout/layout.comp';
 import About from '../components/home-components/about/about.comp';
+import Services from '../components/home-components/services/services.comp';
 import HeroBanner from '../components/hero-banner/hero-banner';
 import PagesHero from '../components/pages-hero/pages-hero.comp';
 import FeaturedTours from '../components/home-components/featured-tours/featured-tours.comp';
@@ -49,6 +50,7 @@ const HomePage = ({
       {/* bootstrap container */}
       <div className="container">
         <About /> {/* ABOUT */}
+        <Services /> {/* SERVICES */}
         <FeaturedTours /> {/* FEATURED TOURS */}
       </div>
     </LayoutWrapperComp>

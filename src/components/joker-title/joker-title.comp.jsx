@@ -6,7 +6,7 @@ import './joker-title.style.sass';
 const JokerTitle = ({ text, subText }) => (
   <h2 className="joker-title">
     <span className="text">{text}</span>
-    <span className="subtext">{subText}</span>
+    <span className="subtext"> {subText}</span>
   </h2>
 );
 

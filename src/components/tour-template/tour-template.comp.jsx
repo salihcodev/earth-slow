@@ -16,6 +16,7 @@ const TourTemplate = ({ tour }) => {
     name,
     slug,
     price,
+    featured,
     days,
     country,
     iamges,
@@ -28,9 +29,13 @@ const TourTemplate = ({ tour }) => {
   return (
     <div className="col-lg-3 col-md-4 col-sm-6 col-xs-12">
       <div className="card tour-template">
-        <div className="card-img-top">
-          <Img fluid={firstTourImg} />
-        </div>
+        {featured ? <span className="featured-sign">FEATURED</span> : null}
+        <Img
+          fluid={firstTourImg}
+          fadeIn={true}
+          className="card-img-top"
+          alt={name}
+        />
         <div className="card-body">
           <h5 className="card-title">{name}</h5>
           <p className="card-text">{description}</p>
@@ -45,7 +50,7 @@ const TourTemplate = ({ tour }) => {
               direction="left"
               duration={1}
               bg="#ddd4"
-              to={`/tours/${slug}`}
+              to={`/tours/${slug.trim()}`}
               className="tour-details"
             >
               full details

@@ -3,7 +3,6 @@ import React from 'react';
 import './about.style.sass';
 
 // UTILITIES:
-// import AboutImg from '../../../assets/defaultBcg.jpg';
 import { Link, useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import JokerBtn from '../../joker-btn/joker-btn';
