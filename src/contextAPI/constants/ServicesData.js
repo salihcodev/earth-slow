@@ -1,61 +1,55 @@
-import React from "react";
+import React from 'react';
 import {
-  FcAddDatabase,
-  FcApproval,
-  FcAssistant,
-  FcBearish,
-  FcCurrencyExchange,
-  FcComments,
-} from "react-icons/fc";
+  MdExtension,
+  MdGTranslate,
+  MdHelp,
+  MdCached,
+  MdLocationOn,
+  MdPhotoCamera,
+} from 'react-icons/md';
 
 const ServicesData = [
   {
-    id: 0,
-    icon: <FcAddDatabase />,
-    serviceName: "serviceName",
+    icon: <MdExtension />,
+    serviceRate: 7,
+    serviceName: 'serviceName',
     serviceDescription:
-      "consectetur adipisicing elit. Doloremque repellendus sapiente qui modi perferendis dicta, earum accusantium quis aliquid! Voluptatibus aliquid ducimus dolorum nesciunt",
-    availability: " 24/24 hour",
+      'adipisicing elit. Doloremque repellendus sapiente qui modi',
   },
   {
-    id: 1,
-    icon: <FcApproval />,
-    serviceName: "serviceName",
+    icon: <MdGTranslate />,
+    serviceRate: 9,
+    serviceName: 'serviceName',
     serviceDescription:
-      "consectetur adipisicing elit. Doloremque repellendus sapiente qui modi perferendis dicta, earum accusantium quis aliquid! Voluptatibus aliquid ducimus dolorum nesciunt",
-    availability: " 12/24 hour",
+      'adipisicing elit. Doloremque repellendus sapiente qui modi',
   },
   {
-    id: 2,
-    icon: <FcAssistant />,
-    serviceName: "serviceName",
+    icon: <MdHelp />,
+    serviceRate: 6,
+    serviceName: 'serviceName',
     serviceDescription:
-      "consectetur adipisicing elit. Doloremque repellendus sapiente qui modi perferendis dicta, earum accusantium quis aliquid! Voluptatibus aliquid ducimus dolorum nesciunt",
-    availability: " 24/24 hour",
+      'adipisicing elit. Doloremque repellendus sapiente qui modi',
   },
   {
-    id: 3,
-    icon: <FcBearish />,
-    serviceName: "serviceName",
+    icon: <MdCached />,
+    serviceRate: 8,
+    serviceName: 'serviceName',
     serviceDescription:
-      "consectetur adipisicing elit. Doloremque repellendus sapiente qui modi perferendis dicta, earum accusantium quis aliquid! Voluptatibus aliquid ducimus dolorum nesciunt",
-    availability: " 12/24 hour",
+      'adipisicing elit. Doloremque repellendus sapiente qui modi',
   },
   {
-    id: 4,
-    icon: <FcCurrencyExchange />,
-    serviceName: "serviceName",
+    icon: <MdLocationOn />,
+    serviceRate: 9,
+    serviceName: 'serviceName',
     serviceDescription:
-      "consectetur adipisicing elit. Doloremque repellendus sapiente qui modi perferendis dicta, earum accusantium quis aliquid! Voluptatibus aliquid ducimus dolorum nesciunt",
-    availability: " 24/24 hour",
+      'adipisicing elit. Doloremque repellendus sapiente qui modi',
   },
   {
-    id: 5,
-    icon: <FcComments />,
-    serviceName: "serviceName",
+    icon: <MdPhotoCamera />,
+    serviceRate: 7,
+    serviceName: 'serviceName',
     serviceDescription:
-      "consectetur adipisicing elit. Doloremque repellendus sapiente qui modi perferendis dicta, earum accusantium quis aliquid! Voluptatibus aliquid ducimus dolorum nesciunt",
-    availability: " 24/24 hour",
+      'adipisicing elit. Doloremque repellendus sapiente qui modi',
   },
 ];
 
