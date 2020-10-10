@@ -1,0 +1,51 @@
+// INCLUDE VARIABLES:
+@import "../../sass/vars/_vars"
+
+div.blog-template
+  margin: 1rem 0
+  position: relative
+  .card-body
+    padding-bottom: 0
+    .card-title
+      color: $main-cl
+      padding-bottom: 0
+      font-weight: bolder
+    .card-text
+      color: $dark-gray
+      display: -webkit-box
+      -webkit-box-orient: vertical
+      -webkit-line-clamp: 3
+      overflow: hidden
+      font-size: 14px
+    .card-footer
+      position: relative
+      margin-top: 3rem
+      padding-top: 2rem
+      p.released-time
+        margin: 0
+        padding: 0
+        display: flex
+        code
+          display: block
+          font-size: 11px
+          color: $dark-gray
+          background: $gray-cl-3
+          padding: 2px 5px
+          border-radius: 3px
+          line-height: 1rem
+      h6
+        margin-top: 0.5rem
+        font-weight: bold
+        color: $alt-clr-2
+      a.tour-details
+        position: absolute
+        top: -22px
+        right: 0
+        background: $alt-clr-2
+        padding: 0.2rem 1rem
+        font-size: 13px
+        color: $gray-cl-3
+        border-radius: 50px
+        border: 0.5rem solid $white
+        text-decoration: none
+        text-transform: uppercase

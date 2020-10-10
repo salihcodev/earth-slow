@@ -9,7 +9,7 @@ export default [
   },
   {
     path: '/blog',
-    text: 'Blog',
+    text: 'Blogs',
   },
   {
     path: '/contact',

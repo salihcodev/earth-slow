@@ -5,6 +5,7 @@ import React from 'react';
 import LayoutWrapperComp from '../components/layout/layout.comp';
 import HeroBanner from '../components/hero-banner/hero-banner';
 import PagesHero from '../components/pages-hero/pages-hero.comp';
+import AllBlogs from '../components/blogs-components/all-blogs/all-blogs.comp';
 import { graphql } from 'gatsby';
 
 // GRAPHQL QUERY:
@@ -42,7 +43,9 @@ const BlogPage = ({
     </PagesHero>
 
     {/* bootstrap container */}
-    <div className="container">BlogPage</div>
+    <div className="container">
+      <AllBlogs />
+    </div>
   </LayoutWrapperComp>
 );
 
