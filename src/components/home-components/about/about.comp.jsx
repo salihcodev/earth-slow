@@ -3,7 +3,7 @@ import React from 'react';
 import './about.style.sass';
 
 // UTILITIES:
-import { Link, useStaticQuery, graphql } from 'gatsby';
+import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import JokerBtn from '../../joker-btn/joker-btn';
 
@@ -59,13 +59,9 @@ const About = () => {
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi eius
             eos aliquam. Sed praesentium eaque ipsum?
           </p>
-          <Link to="/">
-            <JokerBtn
-              text={'read more'.toUpperCase()}
-              color={'#ddd'}
-              bkgc={'#334'}
-            />
-          </Link>
+          <JokerBtn to="/" color={'#ddd'} bkgc={'#334'}>
+            {'read more'.toUpperCase()}
+          </JokerBtn>
         </div>
       </div>
     </section>

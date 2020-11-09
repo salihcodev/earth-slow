@@ -49,7 +49,6 @@ const FeaturedTours = () => {
   const {
     featuredTours: { edges },
   } = toursResponse;
-  console.log(edges);
   return (
     <section className="featured-tours">
       <JokerTitle text={'featured'} subText={'tours'} /> {/* title */}

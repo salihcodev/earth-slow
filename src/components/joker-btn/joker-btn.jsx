@@ -4,15 +4,18 @@ import './joker-btn.style.sass';
 
 // UTILITIES:
 
+import { Link } from 'gatsby';
+
 // COMPONENT:=>
-const JokerBtn = ({ text, color, bkgc, type }) => (
-  <button
+const JokerBtn = ({ color, bkgc, type, to, children }) => (
+  <Link
     type={type}
     style={{ backgroundColor: `${bkgc}`, color: `${color}` }}
     className="joker-btn"
+    to={to}
   >
-    {text}
-  </button>
+    {children}
+  </Link>
 );
 
 export default JokerBtn;

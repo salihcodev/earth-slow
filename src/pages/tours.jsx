@@ -33,9 +33,9 @@ const ToursPage = ({
     <PagesHero home={false} img={fluid}>
       <HeroBanner
         heading={'Our various tours'}
-        hCl={'#223036'}
+        hCl={'#fff'}
         text={'Go ahead and checkout which type of adventure we made.'}
-        Tcl={'#223036'}
+        Tcl={'#fff'}
         btnVal={'purchase a tour'.toUpperCase()}
         btnCl={'#223036'}
         btnBg={'#ddd'}

@@ -5,13 +5,13 @@ import './tour.template.style.sass';
 // UTILITIES:
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
-import { v4 as uuid } from 'uuid';
 
 // COMPONENTS:
 import LayoutWrapperComp from '../../components/layout/layout.comp';
 import PagesHero from '../../components/pages-hero/pages-hero.comp';
 import SingleToursBanner from '../../components/single-page-banner/single-page-banner.comp';
 import JokerBtn from '../../components/joker-btn/joker-btn';
+import JourneyDay from '../../components/journey-day/journey-day.comp';
 
 // PAGE COMPONENT:=>
 const TourTemplate = ({ data: { singleTour } }) => {
@@ -54,26 +54,26 @@ const TourTemplate = ({ data: { singleTour } }) => {
         <div className="single-tour-page">
           <section className="tour-basic-info">
             <div className="row">
-              <div className="col">
+              <div className="col-lg-3 col-sm-6 col-xs-12">
                 <div className="info-box country">
                   <span className="text">country: {country}</span>
                 </div>
               </div>
-              <div className="col">
+              <div className="col-lg-3 col-sm-6 col-xs-12">
                 <div className="info-box price">
                   <span className="text">cost: {price}</span>
                 </div>
               </div>
-              <div className="col">
+              <div className="col-lg-3 col-sm-6 col-xs-12">
                 <div className="info-box featured">
                   {featured ? (
-                    <span className="featured">popularity: featured</span>
+                    <span className="featured">popularity: yes</span>
                   ) : (
-                    <span className="featured">popularity: not featured</span>
+                    <span className="featured">popularity: No</span>
                   )}
                 </div>
               </div>
-              <div className="col">
+              <div className="col-lg-3 col-sm-6 col-xs-12">
                 <div className="info-box days">
                   <span className="text">duration: {days}</span>
                 </div>
@@ -100,26 +100,20 @@ const TourTemplate = ({ data: { singleTour } }) => {
             </section>
             <section className="tour-timeline">
               <h2>Tour timeline</h2>
-              {journeyPlan.map(({ day, sign, info }) => (
-                <div key={uuid()} className="tour-single-day">
-                  <div className="box-head">
-                    <h4 className="day">{day}</h4>
-                    <h6 className="sign">{sign}</h6>
-                  </div>
-                  <div className="box-footer">
-                    <p className="info">{info}</p>
-                  </div>
-                </div>
+              {journeyPlan.map(({ ...day }) => (
+                <JourneyDay singleJuDay={day} />
               ))}
             </section>
 
             <div className="request-btn text-right">
               <JokerBtn
-                text={'Request this tour'}
                 color={'#ddd'}
-                bkgc={'#333'}
+                bkgc={'#223036'}
                 type={'button'}
-              />
+                to="/contact"
+              >
+                Request this tour
+              </JokerBtn>
             </div>
           </div>
         </div>

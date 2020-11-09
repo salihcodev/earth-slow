@@ -120,9 +120,9 @@ const FooterComp = () => {
             <div className="col">
               <div className="policyAndPrivacy">
                 <p className="policy">
-                  <a href="#">policy</a>
-                  <a href="#">privacy</a>
-                  <a href="#">cookies</a>
+                  <Link to="/">policy</Link>
+                  <Link to="/">privacy</Link>
+                  <Link to="/">cookies</Link>
                 </p>
               </div>
             </div>

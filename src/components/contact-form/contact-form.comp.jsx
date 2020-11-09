@@ -78,10 +78,12 @@ const contactForm = () => (
         <JokerBtn
           type={'submit'}
           className="btn btn-primary"
-          text={'submit your trip now'.toUpperCase()}
           color={'#ddd'}
           bkgc={'#333344'}
-        />
+          to=' '
+        >
+          {'submit your trip now'.toUpperCase()}
+        </JokerBtn>
       </div>
     </form>
   </section>

@@ -3,10 +3,10 @@ import React from 'react';
 import './tour-template.style.sass';
 
 // COMPONENTS:
-// import JokerTitle from '../../joker-title/joker-title.comp';
+
 
 // UTILITIES:
-import AniLink from 'gatsby-plugin-transition-link/AniLink';
+import { Link } from 'gatsby';
 import Img from 'gatsby-image';
 
 // COMPONENT:=>
@@ -45,16 +45,13 @@ const TourTemplate = ({ tour }) => {
               <small className="days">days: {days}</small>
             </p>
             <h6 className="price">${price}</h6>
-            <AniLink
-              cover
-              direction="left"
-              duration={1}
-              bg="#ddd4"
+            <Link
+              
               to={`/tours/${slug.trim()}`}
               className="tour-details"
             >
               full details
-            </AniLink>
+            </Link>
           </div>
         </div>
       </div>

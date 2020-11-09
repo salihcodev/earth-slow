@@ -3,7 +3,6 @@ import React from 'react';
 import './single-page-banner.style.sass';
 
 // UTILITIES:
-import { Link } from 'gatsby';
 import JokerBtn from '../joker-btn/joker-btn';
 
 // COMPONENT:=>
@@ -21,9 +20,9 @@ const SingleToursBanner = ({
   <section className="hero-banner">
     <div className="flex-shield">
       {btnVal && (
-        <Link to="/">
-          <JokerBtn bkgc={btnBg} color={btnCl} text={btnVal} />
-        </Link>
+        <JokerBtn bkgc={btnBg} color={btnCl} to="contact">
+          {btnVal}
+        </JokerBtn>
       )}
       {startsAt && <span className="starts-at">{startsAt}</span>}
     </div>

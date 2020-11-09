@@ -7,25 +7,19 @@ import { EarthSlowProvider } from '../../contextAPI/context/contextAPI';
 import 'bootstrap/dist/css/bootstrap.css';
 
 // COMPONENTS:
-import HeaderComp from '../header/header.comp';
 import FooterComp from '../footer/footer.comp';
 
 // THE LAYOUT COMPONENT THAT WRAPS EVERY SINGLE COMPONENT:=>
 const LayoutWrapperComp = ({ children }) => (
-  <article className="layout-wrapper-component">
-    <EarthSlowProvider>
-      {/* HEADER = NAVBAR */}
-      <HeaderComp />
+  <EarthSlowProvider>
+    <div className="layout-container">
+      {/* CHILDREN */}
+      {children}
+    </div>
 
-      <div className="layout-container">
-        {/* CHILDREN */}
-        {children}
-      </div>
-
-      {/* FOOTER */}
-      <FooterComp />
-    </EarthSlowProvider>
-  </article>
+    {/* FOOTER */}
+    <FooterComp />
+  </EarthSlowProvider>
 );
 
 export default LayoutWrapperComp;

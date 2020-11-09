@@ -7,13 +7,13 @@ nav.header
   display: flex
   justify-content: space-between
   align-items: center
-  border-bottom: 1px solid $gray-cl-3
+  background: transparente
 
   // logo
   div.logo-container
     .logo
-      width: 5rem
-      height: 4rem
+      width: 10rem
+      height: 3rem
       margin-left: 0.5rem
 
   // routes
@@ -28,38 +28,45 @@ nav.header
       justify-content: flex-end
       padding-right: 3rem
       li.nav-route
-        min-width: 3rem
+        min-width: 5rem
+        transition: all linear $fast-transition
+        &:hover
+          a
+            color: $alt-clr-2
         a
-          color: $main-cl
+          color: $off-white
           text-decoration: none
           font-family: $main-font
+          font-weight: bold
+          text-transform: uppercase
+          transition: all linear $fast-transition
 
   // sign-in & burch
   div.purchase
     display: block
-    button
-      padding: 0.5rem 1rem
+    a
       font-size: 1rem
       font-weight: bold
       background: transparent
-      border: 1px solid $main-cl
+      border: 1px solid transparent
       margin-right: 0.8rem
-      color: $gray-cl-3
+      color: $off-white
       transition: $fast-transition
-      outline: 0
-
-      &:hover
-        background: $alt-clr-2
-
+      padding: 0.2rem 1rem 0.3rem
+      border-radius: 0.6rem
       &:first-child
         background: $alt-clr-1
         &:hover
-          background: $main-cl
+          background: transparent
+          border: 1px solid $off-white
 
       &:last-child
-        color: $main-cl
+        background: transparent
+        border: 1px solid $off-white
+        color: $off-white
         &:hover
-          color: $gray-cl-3
+          color: $main-cl
+          background: $off-white
 
   // toggler
   button.toggler-container
@@ -68,7 +75,7 @@ nav.header
     background: transparent
     border: none
     span.bar
-      background: $main-cl
+      background: $white
       display: block
       width: 1.5rem
       height: 2px
@@ -95,32 +102,34 @@ section.small-screen-navbar
           padding: 0.2rem 0
           &:not(:last-child)
             border-bottom: 1px solid $gray-cl-3
+          &:hover
+            a
+              color: $alt-clr-1
           a
-            color: $main-cl
+            color: $white
             text-decoration: none
             font-family: $main-font
 
     div.purchase
-      button
-        padding: 0.5rem 1rem
+      a
         font-size: 1rem
         font-weight: bold
         background: transparent
-        border: 1px solid $main-cl
+        border: 1px solid transparent
         margin-right: 0.8rem
-        color: $gray-cl-3
+        color: $off-white
         transition: $fast-transition
-        outline: 0
-
-        &:hover
-          background: $alt-clr-2
-
+        padding: 0.2rem 1rem 0.3rem
+        border-radius: 0.6rem
         &:first-child
           background: $alt-clr-1
           &:hover
-            background: $main-cl
-
+            background: transparent
+            border: 1px solid $off-white
         &:last-child
-          color: $main-cl
+          background: transparent
+          border: 1px solid $off-white
+          color: $off-white
           &:hover
-            color: $gray-cl-3
+            color: $main-cl
+            background: $off-white

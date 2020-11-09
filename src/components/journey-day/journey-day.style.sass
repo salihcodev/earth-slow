@@ -1,0 +1,28 @@
+@import '../../sass/vars/_vars'
+
+.tour-single-day
+  border-bottom: 1px solid $gray-cl-3
+  padding: 5px 0
+  .box-head
+    button.day
+      transition: $main-transition
+      background: transparent
+      display: flex
+      align-items: baseline
+      width: 100%
+      border: none
+      &:focus
+      small
+        padding: 0.8rem
+  .box-footer
+    animation: slide-down linear 0.2s
+    overflow: hidden
+    transition: all ease-in-out $fast-transition
+    p.info
+      padding: 1rem
+
+@keyframes slide-down
+  0%
+    height: 0
+  100%
+    height: 10rem

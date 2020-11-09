@@ -3,7 +3,6 @@ import React from 'react';
 import './hero-banner.style.sass';
 
 // UTILITIES:
-import { Link } from 'gatsby';
 import JokerBtn from '../joker-btn/joker-btn';
 
 // COMPONENT:=>
@@ -17,9 +16,9 @@ const HeroBanner = ({ heading, hCl, text, Tcl, btnVal, btnCl, btnBg }) => (
         {text}
       </p>
 
-      <Link to="/">
-        <JokerBtn bkgc={btnBg} color={btnCl} text={btnVal} />
-      </Link>
+      <JokerBtn to="/" bkgc={btnBg} color={btnCl}>
+        {btnVal}
+      </JokerBtn>
     </div>
   </section>
 );
