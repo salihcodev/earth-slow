@@ -34,6 +34,7 @@ const ToursPage = ({
     return () => {};
   }, []);
 
+
   return (
     <LayoutWrapperComp>
       <PagesHero home={false} img={fluid}>
