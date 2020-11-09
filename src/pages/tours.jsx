@@ -22,6 +22,7 @@ export const query = graphql`
 `;
 
 // PAGE COMPONENT:=>
+document.title = `Earth Slow | All Tours`;
 const ToursPage = ({
   data: {
     pagesHeroImg: {

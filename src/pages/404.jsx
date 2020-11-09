@@ -13,6 +13,7 @@ const text = 'Ooh.. dead end, Maybe you used a bad route';
 const btnVal = 'Back To Home';
 
 // PAGE COMPONENT:=>
+document.title = `Not Found :') | Earth Slow`;
 const NotFoundPage = () => (
   <LayoutWrapperComp>
     <HeroBanner heading={heading} text={text} btnVal={btnVal} />

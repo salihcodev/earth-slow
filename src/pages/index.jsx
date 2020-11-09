@@ -26,6 +26,7 @@ export const query = graphql`
 `;
 
 // PAGE COMPONENT:=>
+document.title = `Earth Slow | Home`;
 const HomePage = ({
   data: {
     pagesHeroImg: {
