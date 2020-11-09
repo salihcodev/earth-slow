@@ -21,7 +21,7 @@ export const query = graphql`
   }
 `;
 // PAGE COMPONENT:=>
-document.title = `Earth Slow | Contact Us`;
+// document.title = `Earth Slow | Contact Us`;
 const ContactPage = ({
   data: {
     pagesHeroImg: {

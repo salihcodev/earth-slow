@@ -22,34 +22,40 @@ export const query = graphql`
 `;
 
 // PAGE COMPONENT:=>
-document.title = `Earth Slow | All Tours`;
 const ToursPage = ({
   data: {
     pagesHeroImg: {
       childImageSharp: { fluid },
     },
   },
-}) => (
-  <LayoutWrapperComp>
-    <PagesHero home={false} img={fluid}>
-      <HeroBanner
-        heading={'Our various tours'}
-        hCl={'#fff'}
-        text={'Go ahead and checkout which type of adventure we made.'}
-        Tcl={'#fff'}
-        btnVal={'purchase a tour'.toUpperCase()}
-        btnCl={'#223036'}
-        btnBg={'#ddd'}
-      />
-    </PagesHero>
+}) => {
+  useEffect(() => {
+    document.title = `Earth Slow | All Tours`;
+    return () => {};
+  }, []);
 
-    {/* bootstrap container */}
-    <div className="container">
-      <section className="all-tours">
-        <AllTours />
-      </section>
-    </div>
-  </LayoutWrapperComp>
-);
+  return (
+    <LayoutWrapperComp>
+      <PagesHero home={false} img={fluid}>
+        <HeroBanner
+          heading={'Our various tours'}
+          hCl={'#fff'}
+          text={'Go ahead and checkout which type of adventure we made.'}
+          Tcl={'#fff'}
+          btnVal={'purchase a tour'.toUpperCase()}
+          btnCl={'#223036'}
+          btnBg={'#ddd'}
+        />
+      </PagesHero>
+
+      {/* bootstrap container */}
+      <div className="container">
+        <section className="all-tours">
+          <AllTours />
+        </section>
+      </div>
+    </LayoutWrapperComp>
+  );
+};
 
 export default ToursPage;

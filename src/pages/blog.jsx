@@ -22,7 +22,7 @@ export const query = graphql`
 `;
 
 // PAGE COMPONENT:=>
-document.title = `Earth Slow | Blog`;
+// document.title = `Earth Slow | Blog`;
 const BlogPage = ({
   data: {
     pagesHeroImg: {
