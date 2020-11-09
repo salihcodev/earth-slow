@@ -26,7 +26,6 @@ export const query = graphql`
 `;
 
 // PAGE COMPONENT:=>
-// document.title = `Earth Slow | Home`;
 const HomePage = ({
   data: {
     pagesHeroImg: {
@@ -34,6 +33,10 @@ const HomePage = ({
     },
   },
 }) => {
+  React.useEffect(() => {
+    document.title = `Earth Slow | Home`;
+    return () => {};
+  }, []);
   return (
     <LayoutWrapperComp>
       <PagesHero home="true" img={fluid}>

@@ -21,14 +21,19 @@ export const query = graphql`
   }
 `;
 // PAGE COMPONENT:=>
-// document.title = `Earth Slow | Contact Us`;
 const ContactPage = ({
   data: {
     pagesHeroImg: {
       childImageSharp: { fluid },
     },
   },
-}) => (
+}) => {
+  React.useEffect(() => {
+    document.title = `Earth Slow | Contact Us`;
+    return () => {};
+  }, []);
+  
+  return (
   <LayoutWrapperComp>
     <PagesHero home={false} img={fluid}>
       <HeroBanner
@@ -47,6 +52,6 @@ const ContactPage = ({
       <ContactForm />
     </div>
   </LayoutWrapperComp>
-);
+)};
 
 export default ContactPage;

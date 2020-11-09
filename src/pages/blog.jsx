@@ -22,32 +22,38 @@ export const query = graphql`
 `;
 
 // PAGE COMPONENT:=>
-// document.title = `Earth Slow | Blog`;
 const BlogPage = ({
   data: {
     pagesHeroImg: {
       childImageSharp: { fluid },
     },
   },
-}) => (
-  <LayoutWrapperComp>
-    <PagesHero home={false} img={fluid}>
-      <HeroBanner
-        heading={'Know more about our services.'}
-        hCl={'#ddd'}
-        text={'We have a teams that are writing a monthly blog post.'}
-        Tcl={'#ddd'}
-        btnVal={'read featured blogs'.toUpperCase()}
-        btnCl={'#223036'}
-        btnBg={'#ddd'}
-      />
-    </PagesHero>
+}) => {
+  React.useEffect(() => {
+    document.title = `Earth Slow | Blog`;
+    return () => {};
+  }, []);
 
-    {/* bootstrap container */}
-    <div className="container">
-      <AllBlogs />
-    </div>
-  </LayoutWrapperComp>
-);
+  return (
+    <LayoutWrapperComp>
+      <PagesHero home={false} img={fluid}>
+        <HeroBanner
+          heading={'Know more about our services.'}
+          hCl={'#ddd'}
+          text={'We have a teams that are writing a monthly blog post.'}
+          Tcl={'#ddd'}
+          btnVal={'read featured blogs'.toUpperCase()}
+          btnCl={'#223036'}
+          btnBg={'#ddd'}
+        />
+      </PagesHero>
+
+      {/* bootstrap container */}
+      <div className="container">
+        <AllBlogs />
+      </div>
+    </LayoutWrapperComp>
+  );
+};
 
 export default BlogPage;

@@ -29,7 +29,7 @@ const ToursPage = ({
     },
   },
 }) => {
-  useEffect(() => {
+  React.useEffect(() => {
     document.title = `Earth Slow | All Tours`;
     return () => {};
   }, []);

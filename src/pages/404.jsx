@@ -13,11 +13,17 @@ const text = 'Ooh.. dead end, Maybe you used a bad route';
 const btnVal = 'Back To Home';
 
 // PAGE COMPONENT:=>
-// document.title = `Not Found :') | Earth Slow`;
-const NotFoundPage = () => (
-  <LayoutWrapperComp>
-    <HeroBanner heading={heading} text={text} btnVal={btnVal} />
-  </LayoutWrapperComp>
-);
+const NotFoundPage = () => {
+  React.useEffect(() => {
+    document.title = `Not Found :') | Earth Slow`;
+    return () => {};
+  }, []);
+
+  return (
+    <LayoutWrapperComp>
+      <HeroBanner heading={heading} text={text} btnVal={btnVal} />
+    </LayoutWrapperComp>
+  );
+};
 
 export default NotFoundPage;
